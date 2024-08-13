@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            margin-left: 200px;
+           
+            
+        }
+        a:hover{
+            border: 2px solid black;
+            background-color: white;
+            border-radius: 50px;
+            padding: 10px;
+            color: #ff9800;
+            
+        }
+        nav{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items:center;
+            background-color: aqua;
+            position: fixed;
+            border: 2px solid black;
+            border-radius: 20px;
+            
+        }
+        #first{
+            margin-left: 200px;
+        }
+        .content {
+            padding-top: 80px; /* To avoid content being hidden under the fixed navbar */
+        }
+        
+        section {
+            height: 50vh; /* Full viewport height for each section */
+            padding: 20px;
+        }
+        #home{
+            border: 2px solid black;
+            margin: 20px;
+            border-radius: 20px;
+            background-color: #ff9800;
+        }
+        #blog{
+            border: 2px solid black;
+            margin: 20px;
+            border-radius: 20px;
+            background-color: yellowgreen;
+        }
+        #about{
+            border: 2px solid black;
+            margin: 20px;
+            border-radius: 20px;
+            background-color: pink;
+        }
+        #contact{
+            border: 2px solid black;
+            margin: 20px;
+            border-radius: 20px;
+            background-color: green;
+        }
+        #home:hover{
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            height: 400px;
+        }
+        #blog:hover{
+            background: linear-gradient(to bottom, #4facfe, #00f2fe);
+            height: 400px;
+        }
+        #about:hover{
+            background: linear-gradient(to bottom, #ffe259, #ffa751);
+            height: 400px;
+        }
+        #contact:hover{
+            background: linear-gradient(to bottom, #4facfe, #00f2fe);
+            height: 400px;
+
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" id="first">Home</a>  
+        <a href="#">Blogs</a>  
+        <a href="#">About Us</a>  
+        <a href="#">Contact Us</a>  
+    </nav>
+    <div class="content">
+        <section id="home">
+            <h1>Home Section</h1>
+            <p>Scroll down to see the effect...</p>
+        </section>
+        <section id="blog">
+            <h1>Blog Section</h1>
+        </section>
+        <section id="about">
+            <h1>About Us Section</h1>
+        </section>
+        <section id="contact">
+            <h1>Contact Section</h1>
+        </section>
+    </div>
+    <script>
+        // script.js
+
+window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    const first = document.getElementById('home');
+    const scrollPosition = window.scrollY;
+    if (scrollPosition > 500) {
+        navbar.style.backgroundColor = '#555fff'; // Change to a darker color
+        
+    } else {
+        navbar.style.backgroundColor = '#00ffff'; // Original color
+    }
+});
+
+    </script>
+</body>
+</html>
